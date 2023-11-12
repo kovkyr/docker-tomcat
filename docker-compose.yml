@@ -1,0 +1,13 @@
+version: '2'
+services:
+    tomcat:
+        image: tomcat:7.0.72
+        restart: always
+        ports:
+            - "8080:8080"
+        user: "root:root"
+        volumes:
+            # https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+            # SHA256: 89B33CAA5BF4CFD235F060C396CB1A5ACB2734A1366DB325676F48C5F5ED92E5
+            - "./webapps/sample.war:/usr/local/tomcat/webapps/sample.war"
+        command: catalina.sh run
