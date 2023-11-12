@@ -7,7 +7,7 @@ Simple tomcat application example with docker-compose
 - Docker + Docker Compose
 - Make
 
-### Usage
+## Usage
 
 ```
 make help
